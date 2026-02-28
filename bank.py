@@ -1,28 +1,28 @@
-
+#bank class
 class BankAccount:
     def __init__(self, name, balance=0):
         self.name = name
         self.balance = balance
-
-    def deposit(self, amount):
-        if amount > 0:
-            self.balance += amount
-            print("Amount Deposited Successfully!")
-        else:
+#method for deposite the amount
+def deposit(self, amount):
+    if amount > 0:
+        self.balance += amount
+        print("Amount Deposited Successfully!")
+    else:
             print("Invalid Amount!")
-
-    def withdraw(self, amount):
-        if amount > self.balance:
-            print("Insufficient Balance!")
-        elif amount <= 0:
-            print("Invalid Amount!")
-        else:
-            self.balance -= amount
-            print("Amount Withdrawn Successfully!")
-
-    def check_balance(self):
-         print("Current Balance:", self.balance)
-
+#method for withdraw the money
+def withdraw(self, amount):
+    if amount > self.balance:
+        print("Insufficient Balance!")
+    elif amount <= 0:
+        print("Invalid Amount!")
+    else:
+         self.balance -= amount
+         print("Amount Withdrawn Successfully!")
+#method foe balance checking
+def check_balance(self):
+    print("Current Balance:", self.balance)
+#menu_driven program
 name = input("Enter Account Holder Name: ")
 account = BankAccount(name)
 while True:
@@ -32,6 +32,7 @@ while True:
     print("4. Exit")
 
     choice = int(input("Enter your choice: "))
+    #to handle the exception
     try:
     choice = int(input("Enter your choice: "))
     except ValueError:
