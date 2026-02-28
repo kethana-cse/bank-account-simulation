@@ -1,5 +1,6 @@
 #bank class
 class BankAccount:
+    #constructor
     def __init__(self, name, balance=0):
         self.name = name
         self.balance = balance
@@ -30,13 +31,12 @@ while True:
     print("2. Withdraw")
     print("3. Check Balance")
     print("4. Exit")
-
-    choice = int(input("Enter your choice: "))
+    
     #to handle the exception
     try:
-    choice = int(input("Enter your choice: "))
+        choice = int(input("Enter your choice: "))
     except ValueError:
-    print("Please enter a valid number!")
+        print("Please enter a valid number!")
     continue
 
     if choice == 1:
