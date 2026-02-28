@@ -32,6 +32,11 @@ while True:
     print("4. Exit")
 
     choice = int(input("Enter your choice: "))
+    try:
+    choice = int(input("Enter your choice: "))
+    except ValueError:
+    print("Please enter a valid number!")
+    continue
 
     if choice == 1:
         amount = float(input("Enter amount to deposit: "))
